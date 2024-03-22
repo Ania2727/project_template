@@ -1,3 +1,5 @@
+import pandas as pd
+
 
 def input_text_console():
     """
@@ -6,7 +8,7 @@ def input_text_console():
         Returns:
             str: The text entered by the user.
         """
-    user_input = input("Enter your text")
+    user_input = input("Enter your text: ")
     return user_input
 
 
@@ -20,7 +22,10 @@ def read_text_file():
         Returns:
             str: The content of the file as a string.
         """
-    pass
+    file = open("data.txt")
+    content = file.read()
+    print(content)
+    file.close()
 
 
 def read_with_pandas():
@@ -33,4 +38,6 @@ def read_with_pandas():
         Returns:
             pandas.DataFrame: Data from the file as a DataFrame.
         """
-    pass
+    df = pd.read_csv("data.txt", sep=" ")
+
+    print(df)
