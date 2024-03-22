@@ -17,13 +17,13 @@ def read_text_file():
         Reads the contents of a text file using built-in Python functions.
 
         Args:
-            data.txt (str): Path to the file from which data should be read.
+            data_input.txt (str): Path to the file from which data should be read.
 
         Returns:
             str: The content of the file as a string.
         """
-    file = open("data.txt")
-    content = file.read()
+    file = open("data_input.txt")
+    content = file.readline()
     print(content)
     file.close()
 
@@ -33,11 +33,11 @@ def read_with_pandas():
         Reads the contents of a text file using the pandas library.
 
         Args:
-            data.txt (str): Path to the file from which data should be read.
+            data_input.txt (str): Path to the file from which data should be read.
 
         Returns:
             pandas.DataFrame: Data from the file as a DataFrame.
         """
-    df = pd.read_csv("data.txt", sep=" ")
+    df = pd.read_csv("data_input.txt", sep=" ")
 
     print(df)
